@@ -1,0 +1,1 @@
+This readme file covers the first major project. The tasks are introductory. Many of these tasks are saved in the directory 'python-hello_world.'

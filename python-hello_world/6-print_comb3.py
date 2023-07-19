@@ -3,4 +3,4 @@ for a in range(10):
       if a < 8:
         print("{}{},".format(a,b),end=" ")
       else:
-        print("{}{}".format(a,b),end=" ")
+        print("{}{}".format(a,b),end="\n")

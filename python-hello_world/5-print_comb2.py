@@ -1,9 +1,19 @@
-
+'''
 def getSortedNumber(number):
     number = sorted(number)
     number = int(str(number))
 for number in range(100):
-    print("%02d" %number,end=", ".format(number))
+    print("{:02}".format(number),end=", ")
+if number == 99:
+    print("{:02}".format(number),end="")
+'''
+
+for number in range(100):
+    print("{:02}".format(number),end=", ")
+if number == 99:
+    print("{:02}".format(number),end=" ")
+
+    
 
 
  

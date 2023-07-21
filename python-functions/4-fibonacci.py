@@ -10,5 +10,3 @@ def fibonacci_sequence(n):
     number2 = nth
     counter = counter + 1
   return fib_sequence
-
-print(fibonacci_sequence(2))

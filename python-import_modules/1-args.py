@@ -1,13 +1,13 @@
 import sys
 def highlight_list(*argv):
-    number_arguements = len(argv)
-    if number_arguements == 0:
-        print (number_arguements, "arguments.")
-    elif number_arguements == 1:
-        print (number_arguements, "argument:")
+    if len(argv) == 0:
+        print (len(argv), "arguments.")
+    elif len(argv) == 1:
+        print (len(argv), "argument:")
     else:
-        print (number_arguements, "arguments:")
+        print (len(argv), "arguments:")
     for i, arg in enumerate(argv, 1):
         print(f"{i}: {arg}")
 if __name__ == "__main__":
-    arguements = sys.argv[1:]
+    argv = sys.argv[1:]
+highlight_list('hello', 'what is', 'howdy', 'my nigga')

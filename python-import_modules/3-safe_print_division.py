@@ -9,7 +9,7 @@ def safe_print_division(a, b):
     finally:
         return output if 'output' in locals() else None
 
-print(safe_print_division(3, 0))
+
 
 ''''
 

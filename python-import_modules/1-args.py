@@ -1,4 +1,5 @@
 import sys
+
 def highlight_list(*argv):
     if len(argv) == 0:
         print (len(argv), "arguments.")
@@ -8,5 +9,7 @@ def highlight_list(*argv):
         print (len(argv), "arguments:")
     for i, arg in enumerate(argv, 1):
             print(f"{i}: {arg}")
+
 if __name__ == "__main__":
-    argv = sys.argv[1:]
+    arguements = sys.argv[1:]
+    highlight_list()

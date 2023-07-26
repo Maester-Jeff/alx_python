@@ -1,2 +1,2 @@
-def my_number(a):
+def variable(a):
     return a

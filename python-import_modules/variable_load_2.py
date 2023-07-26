@@ -1,2 +1,1 @@
-def variable(a):
-  return a
+a = 98

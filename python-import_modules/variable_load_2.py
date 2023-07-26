@@ -1,2 +1,2 @@
 def variable(a):
-    return a
+  return a

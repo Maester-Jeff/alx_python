@@ -1,4 +1,3 @@
-from sys import argv
 if __name__ == "__main__":
   def highlight_list(*argv):
     num_args = len(argv)

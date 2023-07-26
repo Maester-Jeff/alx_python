@@ -10,4 +10,3 @@ if __name__ == "__main__":
             print(len(argv), "arguments:")
             for i, arg in enumerate(argv, 1):
                 print(f"{i}: {arg}")
-highlight_list()

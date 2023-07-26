@@ -3,14 +3,8 @@ def safe_print_division(a, b):
         output = a / b
     except ZeroDivisionError:
         print("Inside result: {}".format("None"))
+        print("{} / {} = {}".format(a, b, "None"))
     else:
         print("Inside result: {}".format(output))
     finally:
-        return output if "output" in locals() else None
-
-
-''''
-
-    finally:
-        return result if 'result' in locals() else None
-'''
+        return print("{} / {} = {}".format(a, b, output))

@@ -1,2 +1,2 @@
-def variable(a):
-  a = 98
+def my_number(a):
+  return a

@@ -1,16 +1,10 @@
-'''
-import sys
-
-if __name__ == "__main__":
-    num_args = len(sys.argv) - 1
-
-    print("Number of argument{}: {}".format('' if num_args == 1 else 's', num_args))
-
-    if num_args == 0:
-        print(":")
+def highlight_list(*argv):
+    if len(argv) == 0:
+        print (len(args),'arguments.')
+    elif len(argv) == 1:
+        print (len(argv), 'argument:')
     else:
-        print(":")
-
-        for i, arg in enumerate(sys.argv[1:], start=1):
-            print("{}: {}".format(i, arg))
-'''
+        print (len(argv),'arguments:')
+    for i, arg in enumerate(argv, 1):
+        print("{}: {}".format(i, arg))
+highlight_list(0)

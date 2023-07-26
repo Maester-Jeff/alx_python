@@ -1,11 +1,13 @@
+import sys
+def highlight_list(*argv):
+    number_arguements = len(argv)
+    if number_arguements == 0:
+        print (number_arguements, "arguments.")
+    elif number_arguements == 1:
+        print (number_arguements, "argument:")
+    else:
+        print (number_arguements, "arguments:")
+    for i, arg in enumerate(argv, 1):
+        print(f"{i}: {arg}")
 if __name__ == "__main__":
-    def highlight_list(*argv):
-        number_argv = len(argv)
-        if number_argv == 0:
-            print (number_argv,'arguments.')
-        elif number_argv == 1:
-            print (number_argv, 'argument:')
-        else:
-            print (number_argv,'arguments:')
-        for i, arg in enumerate(argv, 1):
-            print("{}: {}".format(i, arg))
+    arguements = sys.argv[1:]

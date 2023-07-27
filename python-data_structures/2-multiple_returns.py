@@ -5,7 +5,6 @@ def multiple_returns(sentence):
   else:
     return ("Length: {:d} - First character: {}".format(len(sentence), sentence[0]))
 
-print(multiple_returns("we"))
 
 '''
 def multiple_returns(sentence):

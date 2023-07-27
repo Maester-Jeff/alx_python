@@ -1,4 +1,5 @@
 def print_matrix_integer(matrix=[[]]):
-  for row in matrix:
+  transposed_matrix = list(zip(*matrix))
+  for row in transposed_matrix:
     for num in row:
       print("{:d}".format(num))

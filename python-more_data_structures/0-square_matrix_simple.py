@@ -7,5 +7,7 @@ def square_matrix_simple(matrix=[]):
          new_number = number ** 2
          new_row.append(new_number) #appending the new row with new figures from the squared results
       new_matrix.append(new_row)
-    for row in new_matrix:
-       print(", ".join(str(number)for number in row))
+    return new_matrix
+def display_new_matrix(matrix=[]):
+    for row in matrix:
+      print(", ".join(str(number)for number in row))

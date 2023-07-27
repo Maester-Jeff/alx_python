@@ -10,5 +10,5 @@ if __name__ == "__main__":
     else:
       print(num_argue, "arguments:")
     for i, arg in enumerate(argv, 1):
-      print(f"{i}: {arg}")
+      print(f"{i}: {arg}", sep=" ")
 highlight_list()

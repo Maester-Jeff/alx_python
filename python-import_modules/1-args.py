@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
   import sys
-  a = len(sys.argv)
-  if a == 1:
+  num_argue = len(sys.argv)
+  if num_argue == 1:
     print(0, "arguements.")
-  elif a == 2:
-    print(a-1, "argument:")
+  elif num_argue == 2:
+    print(num_argue - 1, "argument:")
     for i in range(1, len(sys.argv)):
       print (i, sys.argv[1], sep=": ")
   else:

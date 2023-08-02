@@ -7,5 +7,5 @@ class Square:
     '''defining and initializing the square object with a size arguement'''
     def __init__(self, size):
         '''making the size attribute private'''
-        self.__size = size ()
+        self.__size = size
 

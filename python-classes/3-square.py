@@ -24,5 +24,5 @@ class Square:
             raise ValueError("size must be >= 0")
     def area(self):
         '''defining the method to compute the current squared area'''
-        self.area = self.__size**2
+        self.area = self.__size ** 2
         return self.area

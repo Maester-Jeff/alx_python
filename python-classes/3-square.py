@@ -23,4 +23,5 @@ class Square:
         '''defining the method to compute the current squared area'''
         self.area = self.__size**2
         return self.area
+my_square = Square()
         

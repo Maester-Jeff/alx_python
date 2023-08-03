@@ -8,6 +8,7 @@ class Square:
     def __init__(self, size=0):
         '''making the size attribute private'''
         self.__size = size
+        self.check_size()
     '''Creating the loop for checking whether the size is an integer and not less than zero'''
     def check_size(self):
         if type(self.__size) != int:

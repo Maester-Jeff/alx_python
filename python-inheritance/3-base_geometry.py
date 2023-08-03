@@ -2,6 +2,5 @@
 '''
 creating the Class name.
 '''
-class BaseGeometry(object):
+class BaseGeometry:
     '''Empty block for empty Class'''
-    pass

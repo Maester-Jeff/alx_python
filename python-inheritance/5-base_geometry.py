@@ -24,6 +24,6 @@ class BaseGeometry(metaclass = BaseGeometryMetaClass):
         self.name = name
         self.value = value
         if type(self.value) is not int:
-            raise TypeError("name must be an integer")
+            raise TypeError("<name> must be an integer")
         elif self.value <= 0:
             raise ValueError("name must be greater than 0")

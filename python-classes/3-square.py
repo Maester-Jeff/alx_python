@@ -17,9 +17,9 @@ class Square:
         Creating the loop for checking whether the size is an integer and not less than zero
         '''
         self.__size = value
-        if type(value) != int:
+        if type(self.__size) != int:
             raise TypeError("size must be an integer")
-        elif value < 0:
+        elif self.__size < 0:
             raise ValueError("size must be >= 0")
     def area(self):
         '''defining the method to compute the current squared area'''

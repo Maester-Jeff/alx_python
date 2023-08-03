@@ -24,6 +24,7 @@ class BaseGeometry(metaclass = BaseGeometryMetaClass):
         '''Method raises the exception message as stated below.'''
         raise Exception("area() is not implemented")
     def integer_validator(self, name, value):
+        '''method validates value and raises type and value errors.'''
         self.name = name
         self.value = value
         if type(self.value) is not int:
@@ -31,7 +32,9 @@ class BaseGeometry(metaclass = BaseGeometryMetaClass):
         elif self.value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
 class Rectangle(BaseGeometry):
+    '''creation of the Class rectangle'''
     def __init__(self, width, height):
+        '''initialization of the init definition to initialize width and height.'''
         self.__width = width
         self.__height = height
         self.integer_validator("width", width)

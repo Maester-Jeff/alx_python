@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''creating an empty class script'''
-class BaseGeometry:
+class BaseGeometryMetaClass:
     '''
     creating the Class name.
     '''
@@ -14,3 +14,6 @@ class BaseGeometry:
             if attr != "__init_subclass__":
                 list_to_return.append(attr)
         return list_to_return
+class BaseGeometry:
+    '''empty class created'''
+    pass

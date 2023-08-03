@@ -7,10 +7,12 @@ class Square:
     def __init__(self, size=0):
         '''defining and initializing the square object with a private size attribute'''
         self.__size = size 
-    def get_size(self):
+    @property
+    def size(self):
         '''defining the method for retrieving the size attribute'''
         return self.__size
-    def set_size(self, value):
+    @size.setter
+    def size(self, value):
         '''
         Creating the loop for checking whether the size is an integer and not less than zero
         '''
@@ -23,5 +25,3 @@ class Square:
         '''defining the method to compute the current squared area'''
         self.area = self.__size**2
         return self.area
-my_square = Square()
-        

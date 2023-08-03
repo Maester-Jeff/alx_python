@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 '''creating an empty class script'''
-class BaseGeometryMetaClass:
+class BaseGeometryMetaClass(type):
     '''
-    creating the Class name.
+    creating the meta Class to remove unwanted subclasses.
     '''
     def __dir__(cls) -> None:
         '''

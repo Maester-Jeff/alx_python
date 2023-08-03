@@ -6,5 +6,6 @@ def inherits_from(obj, a_class):
     '''
     Else it returns false.
     '''
-    return inherits_from(obj, a_class)
+    return isinstance(obj, a_class)
+
 

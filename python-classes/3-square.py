@@ -14,17 +14,13 @@ class Square:
     @size.setter
     def size(self, value):
         '''
+        property setter method to set the attribute.
         Creating the loop for checking whether the size is an integer and not less than zero
         '''
         self.__size = value
-        self.check_size()
-    def check_size(self):
-        '''
-        Creating the loop for checking whether the size is an integer and not less than zero
-        '''
-        if type(self.__size) != int:
+        if type(value) != int:
             raise TypeError("size must be an integer")
-        elif self.__size < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
     def area(self):
         '''defining the method to compute the current squared area'''

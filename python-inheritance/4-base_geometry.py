@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''creating an empty class script'''
+'''creating a class with a method that raises an exception'''
 class BaseGeometryMetaClass(type):
     '''
     creating the meta Class to remove unwanted subclasses.

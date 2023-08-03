@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-'''creating the class name'''
+'''
+creating the class name.
+'''
 class BaseGeometry:
-    '''Empty block'''
+    '''Empty block for empty class'''
     pass

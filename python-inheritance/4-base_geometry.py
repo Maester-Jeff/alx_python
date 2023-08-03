@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+'''
+Program creates a class with a method raising an exception
+'''
 class BaseGeometry:
     '''
     creating the Class name.

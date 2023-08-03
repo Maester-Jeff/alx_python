@@ -12,7 +12,7 @@ class Square:
         '''
         Creating the loop for checking whether the size is an integer and not less than zero
         '''
-        if type(self.__size) != int:
+        if type(self.__size) is not int:
             raise TypeError("size must be an integer")
         elif self.__size < 0:
             raise ValueError("size must be >= 0") 

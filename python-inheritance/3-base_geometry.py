@@ -14,6 +14,6 @@ class BaseGeometryMetaClass(type):
             if attr != "__init_subclass__":
                 list_to_return.append(attr)
         return list_to_return
-class BaseGeometry:
+class BaseGeometry(Metaclass = BaseGeometryMetaClass):
     '''empty class created'''
     pass

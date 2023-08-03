@@ -17,6 +17,11 @@ class Square:
         Creating the loop for checking whether the size is an integer and not less than zero
         '''
         self.__size = value
+        self.check_size()
+    def check_size(self):
+        '''
+        Creating the loop for checking whether the size is an integer and not less than zero
+        '''
         if type(self.__size) != int:
             raise TypeError("size must be an integer")
         elif self.__size < 0:

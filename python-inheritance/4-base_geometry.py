@@ -17,8 +17,7 @@ class BaseGeometry(metaclass = BaseGeometryMetaClass):
         '''
         return [attribute for attribute in super().__dir__() if attribute != '__init_subclass__']
     pass
-    def area(self, area):
+    def area(self):
         '''Method raises the exception message as stated below.'''
-        self.area = area
         raise Exception("area() is not implemented")
         

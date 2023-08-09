@@ -76,3 +76,11 @@ class Rectangle(Base):
             raise TypeError("y must be an integer")
         elif value < 0:
             raise ValueError("y must be >= 0")
+    
+    def display(self):
+        '''the public instance method that prints in stdout the rectangle with the character'''
+        if self.__width and self.__height == 0:
+            print("")
+        else:
+            for i in range(0, self.__width, self.__height):
+              print("#" *self.__width *self.__height)

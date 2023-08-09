@@ -28,9 +28,9 @@ class Rectangle(Base):
         self.__width = value
         if type(value) is not int:
             '''if statement validating width.'''
-            raise TypeError("{} width must be an integer".format(width))
+            raise TypeError("width must be an integer")
         elif value <= 0:
-            raise ValueError("{} must be > 0".format(width))
+            raise ValueError("width must be > 0")
 
     @property
     def height(self):

@@ -51,6 +51,3 @@ class rctangle(Base):
     def y(self, value):
         '''The getter method for y attribute'''
         self.__y = value
-
-    
-    

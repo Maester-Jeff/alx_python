@@ -4,7 +4,7 @@ This script creates class that inherits the previous base class.
 '''
 from models.base import Base
 '''importing the script of the previous parent class.'''
-class rctangle(Base):
+class rectangle(Base):
     '''creation and initialization of the inheriting class.'''
     def __init__(self, width, height, x=0, y=0, id=None):
         '''class constructor with the necessary attributes.'''

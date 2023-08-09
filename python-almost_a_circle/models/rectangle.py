@@ -26,8 +26,8 @@ class Rectangle(Base):
         '''The setter method for width attribute.'''
         self.__width = value
         '''if statement validating width.'''
-        if not isinstance (value, int):
-            raise TypeError("width must be an integer")
+        if type(value) is not int:
+            raise TypeError("{} must be an integer".format("width"))
         elif value <= 0:
             raise ValueError("width must be > 0")
        

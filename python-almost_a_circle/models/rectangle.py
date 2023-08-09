@@ -21,20 +21,21 @@ class Rectangle(Base):
     def width(self):
         '''The getter method for width attribute.'''
         return self.__width
+    
     @width.setter
     def width(self, value):
-        '''The setter method for width attribute.'''
-        self.__width = value
-        '''if statement validating width.'''
+        '''The setter method for width attribute.'''  
         if type(value) is not int:
+            '''if statement validating width.'''
             raise TypeError("width must be an integer")
-        if value <= 0:
+        elif value <= 0:
             raise ValueError("width must be > 0")
-       
+        self.__width = value
     @property
     def height(self):
         '''The getter method for height attribute.'''
         return self.__height
+    
     @height.setter
     def height(self, value):
         '''The setter method for height attribute.'''
@@ -49,6 +50,7 @@ class Rectangle(Base):
     def x(self):
         '''The getter method for x attribute.'''
         return self.__x
+    
     @x.setter
     def x(self, value):
         '''The getter method for x attribute'''
@@ -64,6 +66,7 @@ class Rectangle(Base):
     def y(self):
         '''The getter method for y attribute'''
         return self.__y
+    
     @y.setter
     def y(self, value):
         '''The getter method for y attribute'''

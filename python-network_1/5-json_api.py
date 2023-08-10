@@ -10,7 +10,7 @@ import sys
 '''Impporting sys package.'''
 if __name__ == "__main__":
     '''Code should not be executed when imported.'''
-    if len(sys.argv) == 2:
+    if len(sys.argv) >= 1:
         '''Checking if argument is given.'''
         letter = sys.argv[1]
     else:

@@ -62,7 +62,6 @@ class Rectangle(Base):
         elif value < 0:
             raise ValueError("x must be >= 0")
     
-    
     @property
     def y(self):
         '''The getter method for y attribute'''
@@ -77,8 +76,7 @@ class Rectangle(Base):
             raise TypeError("y must be an integer")
         elif value < 0:
             raise ValueError("y must be >= 0")
-    
-    def display(self):
-        '''the public instance method that prints in stdout the rectangle with the character'''
-        for i in range(self.__height):
-            print("#" *self.__width)
+    def area(self):
+        '''Function for returning the area of rectangle.'''
+        return self.__width * self.__height
+

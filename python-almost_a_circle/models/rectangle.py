@@ -84,7 +84,7 @@ class Rectangle(Base):
         the rectangle with the character while considering x and y.
         '''
         for i in range(self.__height):
-            print("#" *self.__width + " " *self.__x)
+            print(" " *self.__x + "#" *self.__width)
         for i in range(self.__y):
             print()
 

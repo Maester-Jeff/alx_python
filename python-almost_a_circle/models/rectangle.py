@@ -8,19 +8,15 @@ from models.base import Base
 class Rectangle(Base):
     '''creation and initialization of the inheriting class.'''
     def __init__(self, width, height, x=0, y=0, id=None):
-        '''class constructor with the necessary attributes.'''
+        '''class constructor with the necessary attributes.'''      
+        super().__init__(id)
+        '''Calling the super class with id using the init logic.'''
         self.__width = width
         self.__height = height
         self.__x = x
         self.__y = y
         self.id = id
-        super().__init__(id)
-        '''Calling the super class with id using the init logic.'''
-        if type(width, height, x, y) is not int:
-            '''if statement validating width.'''
-            raise TypeError()
-        elif (width, height, x, y) <= 0:
-            raise ValueError()
+
     @property
     def width(self):
         '''The getter method for width attribute.'''

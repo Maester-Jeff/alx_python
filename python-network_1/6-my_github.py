@@ -15,8 +15,7 @@ if __name__ == "__main__":
     response = requests.get(url, auth = (username, password))
     
     if response.status_code == 200:
-        user_info = response.json()
-        user_id = user_info.get("id")
+        user_id = response.json()["id"]
         print(user_id)
     else:
         print("Error code:", response.status_code)

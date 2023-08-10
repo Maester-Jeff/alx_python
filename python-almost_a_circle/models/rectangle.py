@@ -27,14 +27,14 @@ class Rectangle(Base):
         if type(x) is not int:
             '''if statement validating width.'''
             raise TypeError("x must be an integer")
-        elif x <= 0:
-            raise ValueError("x must be > 0")
+        elif x < 0:
+            raise ValueError("x must be >= 0")
         self.__y = y
         if type(y) is not int:
             '''if statement validating width.'''
             raise TypeError("y must be an integer")
-        elif y <= 0:
-            raise ValueError("y must be > 0")
+        elif y < 0:
+            raise ValueError("y must be >= 0")
         self.id = id
 
     @property

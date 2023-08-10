@@ -11,9 +11,8 @@ if __name__ == "__main__":
     '''Code should not be executed when imported.'''
     url = sys.argv[1]
     req = requests.get(url)
-    response = req.status_code
-    if response >= 400:
+    if req.status_code >= 400:
         '''If statement chcking whether a specific status_code arises.'''
-        print("Error code: {}".format(response))
+        print("Error code: {}".format(req.status_code))
     else:
         print(req.text)

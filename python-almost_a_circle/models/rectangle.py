@@ -23,7 +23,7 @@ class Rectangle(Base):
         return self.__width
     
     @width.setter
-    def width(self, width, value):
+    def width(self, value):
         '''The setter method for width attribute.'''
         self.__width = value
         if type(value) is not int:

@@ -97,7 +97,7 @@ class Rectangle(Base):
         if number_args >= 1:
             self.id = args[0]
         if number_args >= 2:
-            self.width = self.args[1]
+            self.width = args[1]
         if number_args >= 3:
             self.height = args[2]
         if number_args >= 4:

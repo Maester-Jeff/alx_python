@@ -91,3 +91,11 @@ class Rectangle(Base):
         '''The overriding str method.'''
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
 
+    def update(self, *args):
+        '''Public method for assigning arguements to the attributes.'''
+        args1 = self.id
+        args2 = self.width
+        args3 = self.height
+        args4 = self.x
+        args5 = self.y
+

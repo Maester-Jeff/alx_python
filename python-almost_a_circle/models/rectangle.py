@@ -16,7 +16,11 @@ class Rectangle(Base):
         self.id = id
         super().__init__(id)
         '''Calling the super class with id using the init logic.'''
-
+        if type(width, height, x, y) is not int:
+            '''if statement validating width.'''
+            raise TypeError()
+        elif (width, height, x, y) <= 0:
+            raise ValueError()
     @property
     def width(self):
         '''The getter method for width attribute.'''

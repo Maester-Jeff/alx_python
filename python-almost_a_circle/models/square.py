@@ -21,13 +21,18 @@ class Square(Rectangle):
     @property
     def size(self):
         '''Getter method for the size attribute to represent both width and height.'''
-        return self.height
+        return self.width
     
     @size.setter
     def size(self, value):
         '''Corresponding setter method for size.'''
         self.width = value
         self.height = value
+        if type(value) is not int:
+            '''if statement validating size.'''
+            raise TypeError("width must be an integer")
+        elif value <= 0:
+            raise ValueError("width must be > 0")
 
     def __str__(self):
         '''Overloading string method.'''

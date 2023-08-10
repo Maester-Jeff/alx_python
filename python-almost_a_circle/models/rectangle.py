@@ -80,10 +80,15 @@ class Rectangle(Base):
         '''Function for returning the area of rectangle.'''
         return self.__width * self.__height
     def display(self):
-        '''The public instance method that prints in stdout the rectangle with the character.'''
+        '''The public instance method that prints in stdout 
+        the rectangle with the character while considering x and y.
+        '''
         for i in range(self.__height):
-            print("#" *self.__width)
+            print("#" *self.__width + "" *self.__x)
+        for i in range(self.__y):
+            print()
 
     def __str__(self):
         '''The overriding str method.'''
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+

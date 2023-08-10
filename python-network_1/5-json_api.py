@@ -12,12 +12,12 @@ if __name__ == "__main__":
     '''Code should not be executed when imported.'''
     if len(sys.argv) == 2:
         '''Checking if argument is given.'''
-        q = sys.argv[1]
+        letter = sys.argv[1]
     else:
-        q = ""
+        letter = ""
     url = "http://0.0.0.0:5000/search_user"
-    letter = {"letter": q}
-    response = requests.post(url, data = letter)
+    letter_parameter = {"q": letter}
+    response = requests.post(url, data = letter_parameter)
     try:
         '''Checking if repsonse is JSON formatted.'''
         json_response = response.json()

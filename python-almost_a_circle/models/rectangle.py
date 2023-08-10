@@ -93,9 +93,15 @@ class Rectangle(Base):
 
     def update(self, *args):
         '''Public method for assigning arguements to the attributes.'''
-        self.id = self.args1
-        self.width = self.args2
-        self.height = self.args3
-        self.x = self.args4
-        self.y = self.args5
+        number_args = len(args)
+        if number_args >= 1:
+            self.id = args[0]
+        if number_args >= 2:
+            self.width = self.args[1]
+        if number_args >= 3:
+            self.height = args[2]
+        if number_args >= 4:
+            self.x = args[3]
+        if number_args >= 5:
+            self.y = args[4]
 

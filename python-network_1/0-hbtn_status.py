@@ -3,3 +3,5 @@
 import requests
 '''Importing requests package.'''
 req = requests.get('https://alu-intranet.hbtn.io/status')
+print(type(req.text))
+print(req.text)

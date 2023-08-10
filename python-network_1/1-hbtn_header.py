@@ -8,4 +8,5 @@ if __name__ == "__main__":
     '''Code should not be executed when imported.'''
     url = sys.argv[1]
     req = requests.get(url)
-    print(req.headers['x-request-id'])
+    response = req.content
+    print(response.headers['X-Request-Id'])

@@ -9,10 +9,10 @@ import sys
 '''Impporting sys package.'''
 if __name__ == "__main__":
     '''Code should not be executed when imported.'''
-    user_name = sys.argv[1]
-    user_password = sys.argv[2]
+    username = sys.argv[1]
+    password = sys.argv[2]
     url = "https://api.github.com/user"
-    response = requests.get(url, auth = (user_name, user_password))
+    response = requests.get(url, auth = (username, password))
     
     if response.status_code == 200:
         user_info = response.json()

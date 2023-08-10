@@ -11,32 +11,11 @@ class Rectangle(Base):
         '''class constructor with the necessary attributes.'''      
         super().__init__(id)
         '''Calling the super class with id using the init logic.'''
-        self.id = id
         self.__width = width
         self.__height = height
         self.__x = x
         self.__y = y
-
-        if type(width) is not int:
-            '''if statement validating width.'''
-            raise TypeError("width must be an integer")
-        elif width <= 0:
-            raise ValueError("width must be > 0")
-        if type(height) is not int:
-            '''if statement validating width.'''
-            raise TypeError("height must be an integer")
-        elif height <= 0:
-            raise ValueError("height must be > 0")
-        if type(x) is not int:
-            '''if statement validating width.'''
-            raise TypeError("x must be an integer")
-        elif x < 0:
-            raise ValueError("x must be >= 0")
-        if type(y) is not int:
-            '''if statement validating width.'''
-            raise TypeError("y must be an integer")
-        elif y < 0:
-            raise ValueError("y must be >= 0")
+        self.id = id
 
     @property
     def width(self):

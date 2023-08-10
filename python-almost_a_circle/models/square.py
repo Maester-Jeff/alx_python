@@ -19,7 +19,7 @@ class Square(Rectangle):
     @property
     def size(self):
         '''Getter method for the size attribute to represent both width and height.'''
-        return self.height, self.width
+        return self.height
     
     @size.setter
     def size(self, value):
@@ -29,5 +29,5 @@ class Square(Rectangle):
 
     def __str__(self):
         '''Overloading string method.'''
-        return f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"
+        return f"[Square] ({self.id}) {self.x}/{self.y} - {self.height}"
 

@@ -91,8 +91,8 @@ class Rectangle(Base):
         '''The overriding str method.'''
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
 
-    def update(self, *args):
-        '''Public method for assigning arguements to the attributes.'''
+    def update(self, *args, **kwargs):
+        '''Public method with *args and **kwargsfor assigning arguements to the attributes.'''
         number_args = len(args)
         if number_args >= 1:
             self.id = args[0]
@@ -104,4 +104,6 @@ class Rectangle(Base):
             self.x = args[3]
         if number_args >= 5:
             self.y = args[4]
-
+        if number_args == 0:
+            for key, value in kwargs.items():
+                setattr(self, key, value)

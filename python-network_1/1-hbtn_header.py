@@ -6,6 +6,6 @@ import sys
 '''Impporting requests package.'''
 if __name__ == "__main__":
     '''Code should not be executed when imported.'''
-    req = requests.get('https://intranet.hbtn.io')
+    req = requests.get('')
     response = req.headers['X-Request-Id']
     print(response)

@@ -37,4 +37,3 @@ class Square(Rectangle):
     def __str__(self):
         '''Overloading string method.'''
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.height}"
-

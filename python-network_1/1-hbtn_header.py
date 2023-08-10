@@ -6,7 +6,7 @@ import sys
 '''Impporting requests package.'''
 if __name__ == "__main__":
     '''Code should not be executed when imported.'''
-    url = sys.argv[1]
+    url = sys.argv
     req = requests.get(url)
     response = req.headers['X-Request-Id']
     print(response)

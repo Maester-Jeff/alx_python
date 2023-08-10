@@ -14,9 +14,10 @@ if __name__ == "__main__":
     url = "https://api.github.com/user"
     auth = requests.auth.HTTPBasicAuth(user_name, user_password)
     response = requests.get("https://api.github.com/user", auth = auth)
-    user_info = response.json()
-    user_id = user_info.get("id")
+    
     if response.status_code == 200:
+        user_info = response.json()
+        user_id = user_info.get("id")
         print(user_id)
     else:
         print("Error code:", response.status_code)

@@ -13,7 +13,7 @@ if __name__ == "__main__":
     user_password = sys.argv[2]
     url = "https://api.github.com/user"
     auth = requests.auth.HTTPBasicAuth(user_name, user_password)
-    response = requests.get("https://api.github.com/user", auth = auth)
+    response = requests.get(url, auth = auth)
     
     if response.status_code == 200:
         user_info = response.json()

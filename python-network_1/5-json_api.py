@@ -10,14 +10,14 @@ import sys
 '''Impporting sys package.'''
 if __name__ == "__main__":
     '''Code should not be executed when imported.'''
-    if len(sys.argv) >= 1:
+    if len(sys.argv) == 2:
         '''Checking if argument is given.'''
-        letter = sys.argv[1]
+        q = sys.argv[1]
     else:
-        letter = ""
+        q = ""
     url = "http://0.0.0.0:5000/search_user"
-    data = {"q": letter}
-    response = requests.post(url, data=data)
+    letter_parameter = {"letter": q}
+    response = requests.post(url, data = letter_parameter)
     try:
         '''Checking if repsonse is formatted.'''
         json_response = response.json()

@@ -13,8 +13,8 @@ if __name__ == "__main__":
     password = sys.argv[2]
     url = "https://api.github.com/user"
     response = requests.get(url, auth = (username, password))
-    
     if response.status_code == 200:
+        '''If statement to help display the id.'''
         user_id = response.json()["id"]
         print(user_id)
     else:

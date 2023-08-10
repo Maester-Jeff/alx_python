@@ -3,4 +3,4 @@
 import requests
 '''Importing requests package.'''
 req = requests.get('https://alu-intranet.hbtn.io/status')
-print("Body response:\n -type:{} \n -content:{}".format(type(req.text), req.text))
+print("Body response:       \n -type: {} \n -content: {}".format(type(req.text), req.text))

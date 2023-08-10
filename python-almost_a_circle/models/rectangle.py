@@ -83,11 +83,10 @@ class Rectangle(Base):
         '''The public instance method that prints in stdout 
         the rectangle with the character while considering x and y.
         '''
-        for i in range(self.__height):
-            print(" " *self.__x + "#" *self.__width)
         for i in range(self.__y):
             print()
-
+        for i in range(self.__height):
+            print(" " *self.__x + "#" *self.__width)
     def __str__(self):
         '''The overriding str method.'''
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"

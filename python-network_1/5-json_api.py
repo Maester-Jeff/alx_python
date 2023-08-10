@@ -16,10 +16,10 @@ if __name__ == "__main__":
     else:
         q = ""
     url = "http://0.0.0.0:5000/search_user"
-    letter_parameter = {"letter": q}
-    response = requests.post(url, data = letter_parameter)
+    letter = {"letter": q}
+    response = requests.post(url, data = letter)
     try:
-        '''Checking if repsonse is formatted.'''
+        '''Checking if repsonse is JSON formatted.'''
         json_response = response.json()
         
         if isinstance(json_response, dict) and json_response:

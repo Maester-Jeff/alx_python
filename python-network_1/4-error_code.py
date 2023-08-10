@@ -13,6 +13,6 @@ if __name__ == "__main__":
     req = requests.get(url)
     if req.status_code >= 400:
         '''If statement chcking whether a specific status_code arises.'''
-        print("Error code: {}".format(req.status_code))
+        print("Error code: {req.status_code}")
     else:
         print(req.text)

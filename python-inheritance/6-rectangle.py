@@ -3,34 +3,8 @@
 creating a class with a method that raises an exception and another that validates value.
 The module also contains a class rectangle tha inherits the main class.
 '''
-class BaseGeometryMetaClass(type):
-    '''
-    creating the meta Class to remove unwanted subclasses.
-    '''
-    def __dir__(cls):
-        '''
-        function method creats a list of all attributes for the class and excludes the init_subclass.
-        '''
-        return [attribute for attribute in super().__dir__() if attribute != '__init_subclass__']
-class BaseGeometry(metaclass = BaseGeometryMetaClass):
-    '''empty class created'''
-    def __dir__(cls):
-        '''
-        function method creats a list of all attributes for the class and excludes the init_subclass.
-        '''
-        return [attribute for attribute in super().__dir__() if attribute != '__init_subclass__']
-    pass
-    def area(self):
-        '''Method raises the exception message as stated below.'''
-        raise Exception("area() is not implemented")
-    def integer_validator(self, name, value):
-        '''method validates value and raises type and value errors.'''
-        self.name = name
-        self.value = value
-        if type(self.value) is not int:
-            raise TypeError("{} must be an integer".format(name))
-        elif self.value <= 0:
-            raise ValueError("{} must be greater than 0".format(name))
+from 5-base_geometry import BaseGeometry
+'''Importing the 5-base_geometry module.'''
 class Rectangle(BaseGeometry):
     '''creation of the Class rectangle'''
     def __init__(self, width, height):

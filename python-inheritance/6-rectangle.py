@@ -31,7 +31,7 @@ class BaseGeometry(metaclass = BaseGeometryMetaClass):
             raise TypeError("{} must be an integer".format(name))
         elif self.value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
-class Rectangle(BaseGeometry(metaclass = BaseGeometryMetaClass)):
+class Rectangle(BaseGeometry):
     '''creation of the Class rectangle'''
     def __init__(self, width, height):
         '''initialization of the init definition to initialize width and height.'''

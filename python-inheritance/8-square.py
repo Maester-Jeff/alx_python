@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 '''
-creating a class with a method that raises an exception and another that validates value.
+creating a class with a method that raises an exception 
+and another that validates value.
 The module also contains a class rectangle tha inherits the main class.
 Area() method is also implemented.
 '''
@@ -10,14 +11,16 @@ class BaseGeometryMetaClass(type):
     '''
     def __dir__(cls):
         '''
-        function method creats a list of all attributes for the class and excludes the init_subclass.
+        function method creats a list of all attributes 
+        for the class and excludes the init_subclass.
         '''
         return [attribute for attribute in super().__dir__() if attribute != '__init_subclass__']
 class BaseGeometry(metaclass = BaseGeometryMetaClass):
     '''empty class created'''
     def __dir__(cls):
         '''
-        function method creats a list of all attributes for the class and excludes the init_subclass.
+        function method creats a list of all attributes 
+        for the class and excludes the init_subclass.
         '''
         return [attribute for attribute in super().__dir__() if attribute != '__init_subclass__']
     pass

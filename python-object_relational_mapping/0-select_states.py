@@ -28,9 +28,6 @@ def list_states(username, password, database):
         dbase.close()
 # Ensure the module do not execute when imported
 if __name__ == "__main__":
-    if len(sys.argv) != 4:
-        print("<mysql_username> <mysql_password> <database_name>")
-    else:
         username = sys.argv[1]
         password = sys.argv[2]
         database = sys.argv[3]

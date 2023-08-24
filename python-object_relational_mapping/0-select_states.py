@@ -28,4 +28,4 @@ def list_states(username, password, database):
         dbase.close()
 # Ensure the module do not execute when imported
 if __name__ == "__main__":
-    list_states('root', 'root', 'hbtn_0e_0_usa')
+    list_states('username', 'password', 'database')

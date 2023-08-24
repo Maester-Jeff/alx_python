@@ -1,5 +1,8 @@
+#script that lists all states from the database hbtn_0e_0_usa.
+#Importing mysqldb module.
 import MySQLdb
 import sys
+# function definition for listing the states.
 def list_states(username, password, database):
         # Connect to the MySQL server
         dbase = MySQLdb.connect(
@@ -9,30 +12,20 @@ def list_states(username, password, database):
             passwd=password,
             db=database
         )
-       
-        # Create a cursor to interact with the database
+        # Creating a cursor for the database
         cursor = dbase.cursor()
         
-        # Execute the SQL query to retrieve states sorted by id
+        # Execute the SQL query to retrieve states
         query = "SELECT * FROM states ORDER BY id ASC"
         cursor.execute(query)
-     
         # Fetch all the rows
         rows = cursor.fetchall()
-     
-        # Display the results
+        # Displaying the results
         for row in rows:
             print(row)
-       
-        # Close the cursor and connection
+        # Closing the cursor and connection
         cursor.close()
         dbase.close()
-
+# Ensure the module do not execute when imported
 if __name__ == "__main__":
-    if len(sys.argv) != 4:
-        print("Usage: python script.py <mysql_username> <mysql_password> <database_name>")
-    else:
-        username = sys.argv[1]
-        password = sys.argv[2]
-        database = sys.argv[3]
-        list_states(username, password, database)
+    list_states('root', 'root', 'hbtn_0e_0_usa')

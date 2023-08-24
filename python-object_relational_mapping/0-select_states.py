@@ -5,6 +5,7 @@ import MySQLdb
 
 import sys
 # Function definition for listing the states.
+
 def list_states(username, password, database):
         # Connect to the MySQL server
         dbase = MySQLdb.connect(
@@ -27,6 +28,7 @@ def list_states(username, password, database):
         # Closing the cursor and connection
         cursor.close()
         dbase.close()
+
 # Ensure the module do not execute when imported
 if __name__ == "__main__":
         username = sys.argv[1]

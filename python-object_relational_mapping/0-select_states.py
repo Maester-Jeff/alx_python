@@ -1,8 +1,10 @@
-#script that lists all states from the database hbtn_0e_0_usa.
-#Importing mysqldb module.
+# Script that lists all states from the database hbtn_0e_0_usa.
+# Importing mysqldb module.
+
 import MySQLdb
+
 import sys
-# function definition for listing the states.
+# Function definition for listing the states.
 def list_states(username, password, database):
         # Connect to the MySQL server
         dbase = MySQLdb.connect(
@@ -14,7 +16,6 @@ def list_states(username, password, database):
         )
         # Creating a cursor for the database
         cursor = dbase.cursor()
-        
         # Execute the SQL query to retrieve states
         results = "SELECT * FROM states ORDER BY id ASC"
         cursor.execute(results)

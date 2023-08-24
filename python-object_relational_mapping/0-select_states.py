@@ -16,8 +16,8 @@ def list_states(username, password, database):
         cursor = dbase.cursor()
         
         # Execute the SQL query to retrieve states
-        query = "SELECT * FROM states ORDER BY id ASC"
-        cursor.execute(query)
+        results = "SELECT * FROM states ORDER BY id ASC"
+        cursor.execute(results)
         # Fetch all the rows
         rows = cursor.fetchall()
         # Displaying the results
@@ -28,4 +28,10 @@ def list_states(username, password, database):
         dbase.close()
 # Ensure the module do not execute when imported
 if __name__ == "__main__":
-    list_states('root', 'root', 'hbtn_0e_0_usa')
+    if len(sys.argv) != 4:
+        print("<mysql_username> <mysql_password> <database_name>")
+    else:
+        username = sys.argv[1]
+        password = sys.argv[2]
+        database = sys.argv[3]
+        list_states(username, password, database)

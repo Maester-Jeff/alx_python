@@ -7,9 +7,8 @@ class State(Base):
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
     name = Column(String(128), nullable=False)
-
-# Create an instance of declarative_base
-Base = declarative_base()
+    # Create an instance of declarative_base
+    Base = declarative_base()
 
 if __name__ == "__main__":
     # Replace these with your MySQL credentials and database name

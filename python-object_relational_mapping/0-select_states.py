@@ -7,6 +7,7 @@ import sys
 # Function definition for listing the states.
 
 def list_states(username, password, database):
+
         # Connect to the MySQL server
         dbase = MySQLdb.connect(
             host="localhost",

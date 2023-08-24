@@ -1,4 +1,5 @@
 import MySQLdb
+
 def list_states(username, password, database):
     conn = MySQLdb.connect(host='localhost', user=username, passwd=password, db=database)
     cursor = conn.cursor()
@@ -8,5 +9,6 @@ def list_states(username, password, database):
         print(result)
     cursor.close()
     conn.close()
+
 if __name__ == '__main__':
     list_states('root', 'root', 'hbtn_0e_0_usa')

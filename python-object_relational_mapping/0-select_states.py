@@ -1,7 +1,5 @@
 import MySQLdb
 import sys
-
-
 def list_states(username, password, database):
         # Connect to the MySQL server
         dbase = MySQLdb.connect(
@@ -11,7 +9,7 @@ def list_states(username, password, database):
             passwd=password,
             db=database
         )
-        
+       
         # Create a cursor to interact with the database
         cursor = dbase.cursor()
         
@@ -21,7 +19,7 @@ def list_states(username, password, database):
      
         # Fetch all the rows
         rows = cursor.fetchall()
-      
+     
         # Display the results
         for row in rows:
             print(row)

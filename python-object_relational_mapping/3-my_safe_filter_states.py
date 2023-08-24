@@ -6,7 +6,6 @@ import MySQLdb
 import sys
 
 def safe_search_states(username, password, database, state_search):
-    try:
         # Connect to the MySQL server
         dbase = MySQLdb.connect(
             host="localhost",
@@ -17,7 +16,7 @@ def safe_search_states(username, password, database, state_search):
         )
         
         # Create a cursor to interact with the database
-        cursor = connection.cursor()
+        cursor = dbase.cursor()
         
         # Prepare the SQL query with parameters
         results = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
@@ -35,9 +34,6 @@ def safe_search_states(username, password, database, state_search):
         # Close the cursor and connection
         cursor.close()
         dbase.close()
-        
-    except MySQLdb.Error as e:
-        print("Error:", e)
 
 if __name__ == "__main__":
         username = sys.argv[1]

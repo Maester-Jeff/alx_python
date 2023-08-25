@@ -4,7 +4,13 @@ import MySQLdb
 
 def list_cities(username, password, database):
     try:
-        conn = MySQLdb.connect(host='localhost', user=username, passwd=password, db=database)
+        conn = MySQLdb.connect(
+            host='localhost', 
+            port=3306, 
+            user=username, 
+            passwd=password, 
+            db=database
+        )
         cursor = conn.cursor()
         cursor.execute("SELECT * FROM cities ORDER BY id ASC")
         results = cursor.fetchall()
@@ -17,4 +23,4 @@ def list_cities(username, password, database):
 
 
 if __name__ == '__main__':
-    list_cities('username', 'password', 'database_name')
+    list_cities('username', 'password', 'database')

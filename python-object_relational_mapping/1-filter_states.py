@@ -19,7 +19,10 @@ def states_with_N(username, password, database):
         )
         # Creating a cursor for the database
         cursor = dbase.cursor()
-        # Executing the SQL query to retrieve states starting with 'N' and sorted by id
+        '''
+        Executing the SQL query to retrieve 
+        states starting with 'N' and sorted by id.
+        '''
         results = "SELECT * FROM states \
                   WHERE name LIKE 'N%' ORDER BY id ASC"
         cursor.execute(results)

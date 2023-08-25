@@ -9,17 +9,18 @@ from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
     if len(sys.argv) != 4:
-        print("Usage: {} <username> <password> <dbname>".format(sys.argv[0]))
+        print("Usage: {} <username> <password> <dbname>"
+                .format(sys.argv[0]))
         sys.exit(1)
 
     username = sys.argv[1]
     password = sys.argv[2]
-    dbname = sys.argv[3]
+    dbase = sys.argv[3]
 
     # Create engine and establish database connection
     engine = create_engine(
-        'mysql+mysqldb://{}:{}@localhost/{}' \
-        .format(username, password, dbname), \
+        'mysql+mysqldb://{}:{}@localhost/{}'
+        .format(username, password, dbname),
         pool_pre_ping=True
     )
 

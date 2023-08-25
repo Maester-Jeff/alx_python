@@ -51,31 +51,35 @@ import MySQLdb
 def list_cities_by_state(username, password, dbname, state_name):
     try:
         # Connect to the MySQL server
-        db = MySQLdb.connect(host='localhost', port=3306, user=username, passwd=password, db=dbname)
+        dbase = MySQLdb.connect(
+            host='localhost', 
+            port=3306, 
+            user=username, 
+            passwd=password, 
+            db=dbname
+        )
 
         # Create a cursor to interact with the database
-        cursor = db.cursor()
+        cursor = dbase.cursor()
 
         # Execute the query to fetch cities of the specified state
-        query = """
-        SELECT cities.name
-        FROM cities
-        JOIN states ON cities.state_id = states.id
-        WHERE states.name = %s
-        ORDER BY cities.id ASC;
-        """
-        cursor.execute(query, (state_name,))
+        results = "SELECT cities.name \
+                FROM cities \
+                JOIN states ON cities.state_id = states.id \
+                WHERE states.name = %s \
+                ORDER BY cities.id ASC"
+        cursor.execute(results, (state_name,))
 
         # Fetch all the results
-        results = cursor.fetchall()
+        rows = cursor.fetchall()
 
         # Display the results as a comma-separated string
-        cities_list = ', '.join([row[0] for row in results])
+        cities_list = ', '.join([row[0] for row in rows])
         print(cities_list)
 
         # Close the cursor and the database connection
         cursor.close()
-        db.close()
+        dbase.close()
 
     except MySQLdb.Error as e:
         print("MySQL Error:", e)

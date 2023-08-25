@@ -4,7 +4,7 @@ import sys
 def list_cities(username, password, database):
 
         # Connect to the MySQL server
-        connection = MySQLdb.connect(
+        dbase = MySQLdb.connect(
             host="localhost",
             port=3306,
             user=username,
@@ -13,11 +13,11 @@ def list_cities(username, password, database):
         )
         
         # Create a cursor to interact with the database
-        cursor = connection.cursor()
+        cursor = dbase.cursor()
         
         # Execute the SQL query to retrieve all cities and sort by id
-        query = "SELECT * FROM cities ORDER BY id ASC"
-        cursor.execute(query)
+        results = "SELECT * FROM cities ORDER BY id ASC"
+        cursor.execute(results)
         
         # Fetch all the rows
         rows = cursor.fetchall()
@@ -28,7 +28,7 @@ def list_cities(username, password, database):
         
         # Close the cursor and connection
         cursor.close()
-        connection.close()
+        dbase.close()
 
 if __name__ == "__main__":
         username = sys.argv[1]

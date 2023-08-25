@@ -4,6 +4,7 @@ import MySQLdb
 def list_cities_by_state(username, password, dbname, state_name):
 
     try:
+
         # Connect to the MySQL server
         dbase = MySQLdb.connect(
             host='localhost',

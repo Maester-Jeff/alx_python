@@ -1,23 +1,14 @@
-from sqlalchemy import create_engine, Column, Integer, String
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
-
-# Define the State class
-class State(Base):
-    __tablename__ = 'states'
-    id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
-    name = Column(String(128), nullable=False)
-    # Create an instance of declarative_base
-    Base = declarative_base()
+#!/usr/bin/python3
+"""Start link class to table in database
+"""
+import sys
+from model_state import Base
+from sqlalchemy import create_engine
 
 if __name__ == "__main__":
-    # Replace these with your MySQL credentials and database name
-    mysql_username = "your_username"
-    mysql_password = "your_password"
-    database_name = "your_database"
-
-    # Create a MySQL connection
-    engine = create_engine(f"mysql://{mysql_username}:{mysql_password}@localhost:3306/{database_name}")
+    if len(sys.argv) != 4:
+        print("Usage: {} <username> <password> <dbname>".format(sys.argv[0]))
+        sys.exit(1)
     
-    # Create all tables defined by the classes that inherit from Base
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
     Base.metadata.create_all(engine)

@@ -6,10 +6,10 @@ import MySQLdb
 def list_cities(username, password, dbname):
         # Connect to the MySQL server
         dbase = MySQLdb.connect(
-            host='localhost', 
-            port=3306, 
-            user=username, 
-            passwd=password, 
+            host='localhost',
+            port=3306,
+            user=username,
+            passwd=password,
             db=dbname
         )
 

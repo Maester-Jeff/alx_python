@@ -20,7 +20,7 @@ if __name__ == "__main__":
     # Create engine and establish database connection
     engine = create_engine(
         'mysql+mysqldb://{}:{}@localhost/{}'
-        .format(username, password, dbname),
+        .format(username, password, dbase),
         pool_pre_ping=True
     )
 

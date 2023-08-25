@@ -5,6 +5,7 @@ import MySQLdb
 
 import sys
 
+
 # Function definition for listing the states.
 def searched_states(username, password, database, state_name_searched):
 
@@ -19,7 +20,10 @@ def searched_states(username, password, database, state_name_searched):
         # Creating a cursor for the database
         cursor = dbase.cursor()
         # Executing the SQL query to retrieve states.
-        results = "SELECT * FROM states WHERE name LIKE '{}' ORDER BY id ASC".format(state_name_searched)
+        results = (
+                "SELECT * FROM states WHERE name LIKE '{}' ORDER BY id ASC"
+                .format(state_name_searched)
+        )
         cursor.execute(results)
         # Fetching all the rows
         rows = cursor.fetchall()

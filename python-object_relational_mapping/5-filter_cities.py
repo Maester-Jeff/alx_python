@@ -1,6 +1,7 @@
 import sys
 import MySQLdb
 
+
 def list_cities_by_state(username, password, dbname, state_name):
 
     try:

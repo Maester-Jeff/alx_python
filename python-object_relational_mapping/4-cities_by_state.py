@@ -2,9 +2,16 @@
 import sys
 import MySQLdb
 
+
 def list_cities(username, password, dbname):
         # Connect to the MySQL server
-        dbase = MySQLdb.connect(host='localhost', port=3306, user=username, passwd=password, db=dbname)
+        dbase = MySQLdb.connect(
+            host='localhost', 
+            port=3306, 
+            user=username, 
+            passwd=password, 
+            db=dbname
+        )
 
         # Create a cursor to interact with the database
         cursor = dbase.cursor()

@@ -2,7 +2,7 @@ import MySQLdb
 import sys
 
 def list_cities(username, password, database):
-    try:
+
         # Connect to the MySQL server
         connection = MySQLdb.connect(
             host="localhost",
@@ -29,14 +29,8 @@ def list_cities(username, password, database):
         # Close the cursor and connection
         cursor.close()
         connection.close()
-        
-    except MySQLdb.Error as e:
-        print("Error:", e)
 
 if __name__ == "__main__":
-    if len(sys.argv) != 4:
-        print("Usage: python script.py <mysql_username> <mysql_password> <database_name>")
-    else:
         username = sys.argv[1]
         password = sys.argv[2]
         database = sys.argv[3]

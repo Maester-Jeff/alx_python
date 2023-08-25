@@ -25,11 +25,11 @@ def list_cities_by_state(username, password, database, state_name):
         cursor.execute(query, (state_name,))
         
         # Fetch all the rows
-        rows = cursor.fetchall()
+        results = cursor.fetchall()
         
-        # Display the results
-        for row in rows:
-            print(row)
+        # Display the results as a comma-separated string
+        cities_list = ', '.join([row[0] for row in results])
+        print(cities_list)
         
         # Close the cursor and connection
         cursor.close()

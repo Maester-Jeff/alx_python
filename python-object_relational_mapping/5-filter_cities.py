@@ -2,13 +2,14 @@ import sys
 import MySQLdb
 
 def list_cities_by_state(username, password, dbname, state_name):
+
     try:
         # Connect to the MySQL server
         dbase = MySQLdb.connect(
-            host='localhost', 
-            port=3306, 
-            user=username, 
-            passwd=password, 
+            host='localhost',
+            port=3306,
+            user=username,
+            passwd=password,
             db=dbname
         )
 
@@ -40,7 +41,10 @@ def list_cities_by_state(username, password, dbname, state_name):
 
 if __name__ == "__main__":
     if len(sys.argv) != 5:
-        print("Usage: {} <username> <password> <dbname> <state_name>".format(sys.argv[0]))
+        print(
+            "Usage: {} <username> <password> <dbname> <state_name>"
+            .format(sys.argv[0])
+        )
         sys.exit(1)
 
     username = sys.argv[1]

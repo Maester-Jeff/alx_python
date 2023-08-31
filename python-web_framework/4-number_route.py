@@ -29,7 +29,7 @@ def python(text):
 @app.route("/number/<n>", strict_slashes=False)
 def number(n):
     if n is int:
-        return f'n is a number'
+        return f'{n} is a number'
     else:
         return None
 
